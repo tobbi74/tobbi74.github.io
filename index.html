@@ -1,0 +1,117 @@
+<DOCTYPE html>
+<html>
+  <head>
+    <title>Tobbi's 30 MFF Website</title>
+    <!-- create responsive layout -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link to the css file -->
+    <link href="style.css" rel="stylesheet">
+    <!-- link to jQuery library for Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- create a background -->
+    <!-- the id for each section is to link the section from the nav bar to the section area on the webpage -->
+    <div id="top" class="container">
+
+      <!-- video page -->
+      <div class="video1">
+        <video class="video2" width="1280" height="720" autoplay volume="2">
+          <source src="content/30MFF-Distancing.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <!-- create play/pause button -->
+        <script src="script.js"></script>
+        <div class="playpause"></div>
+      </div>
+
+      <!-- about page -->
+      <div id="about" class="about">
+        <div class="about_elements">
+          <div class="about_image">
+            <img src="content/poster2480x3508.jpg" width ="620" height="877">
+          </div>
+          <div class="about_text">
+            <p class="about_header"> About </p>
+            <p> This is a short film that is shot for the class “Communication Lab” at New York University Abu Dhabi, Spring 2021. This movie is shot within 15 minutes and is edited within 15 minutes.
+ <br><br> Watching the video above, you cannot move forward or backward to see the video. Instead, you have to watch the video without any control except the play/pause control. This shows the restrictions we all face during the pandemic.
+ <br><br> The film portrays a common image during the pandemic: Zoom University. Due to the lockdown, every activity is moving on to Zoom. We cannot attend in-person class, thus the film is shot through Zoom. We cannot gather, thus we play and hang out with each other through Zoom. We cannot do even the simplest activity such as borrowing a pencil or an eraser in person, thus we portray doing them through Zoom. Everyone is stuck within the box of Zoom.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- crew page -->
+      <!-- the id for each crew member is used to change the image in JavaScript -->
+      <div id="crew" class="crew">
+        <p class="crew_header"> Crew </p>
+        <div class="crew_row">
+          <div class="crew_column">
+            <p> Ryan </p>
+            <img id = "ryan" alt = "" src="content/ryan.png">
+          </div>
+          <div class="crew_column">
+            <p> Shamma </p>
+            <img id = "shamma" alt = "" src="content/shamma.png">
+          </div>
+          <div class="crew_column">
+            <p> Tobbi </p>
+            <img id = "tobbi" alt = "" src="content/tobbi.png">
+          </div>
+          <div class="crew_column">
+            <p> Tona </p>
+            <img id = "tona" alt = "" src="content/tona.png">
+          </div>
+        </div>
+      </div>
+
+      <!-- backstage page -->
+      <div id="backstage" class="backstage">
+        <p class="backstage_header"> Backstage </p>
+        <div class="backstage_row">
+          <div class="backstage_column">
+            <img src="content/1.jpg">
+            <img src="content/2.jpg">
+          </div>
+          <div class="backstage_column">
+            <img src="content/3.jpg">
+            <img src="content/4.jpg">
+          </div>
+          <div class="backstage_column">
+            <img src="content/5.jpg">
+            <img src="content/6.jpg">
+          </div>
+        </div>
+      </div>
+
+      <!-- contact -->
+      <div id="contactform" class="contact">
+        <p class="contact_header"> Contact </p>
+        <form id="contact" method="post" action="">
+          <input name="name" type="text" class="form_control" placeholder="your name" required><br>
+          <input name="email" type="email" class="form_control" placeholder="your email" required><br>
+          <textarea name="message" class="form_control" placeholder="your message" rows="4" required></textarea><br>
+          <input type="submit" class="form_control submit" value="submit">
+        </form>
+      </div>
+
+      <!-- nav bar -->
+      <div class ="nav">
+        <!-- logo -->
+        <div class="logo" onclick="topFunction()">
+          <a href="#top">30MFF</a>
+        </div>
+        <!-- menu -->
+        <div class="menu">
+          <ul>
+            <!-- a href links each word to the section area on the webpage -->
+            <li> <a href="#about">about</a></li>
+            <li><a href="#crew">crew</a></li>
+            <li><a href="#backstage">backstage</a></li>
+            <li><a href="#contactform">contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
