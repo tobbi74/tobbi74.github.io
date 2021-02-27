@@ -1,0 +1,31 @@
+body {
+  font-family: Georgia;
+  background-color: #000000;
+}
+
+#start {
+  font-size: 7vw;
+  color: #ffffff;
+  display: flex;
+  padding: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.language {
+  font-size: 3vw;
+  color: #ffff00;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-right: 40%;
+  margin-left: 10%;
+  text-align: left;
+}
+
+.helu {
+  font-size: 7vw;
+  color: #ffffff;
+  margin-bottom: 10%;
+  margin-left: 60%;
+  text-align: left;
+}
