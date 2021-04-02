@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Splash and Dissolve</title>
+
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/reset/reset-min.css">
+
+<style type="text/css">
+#content {
+   display: none;
+}
+</style>
+
+<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script> -->
+
+<script type="text/javascript">
+const checkpoint = 1000;
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll >= checkpoint) {
+    opacity = 1 - currentScroll / checkpoint;
+    opacity2 == 1;
+  } else {
+    opacity = 0;
+  }
+  document.querySelector("#splash").style.opacity = opacity;
+  document.querySelector("#content").style.opacity = opacity2;
+});
+
+
+// $(window).scroll(function() {
+// // 100 = The point you would like to fade the nav in.
+//
+// 	if ($(window).scrollTop() > 80 ){
+//
+//     $("#splash").fadeOut("slow", function() {
+//        $("#content").show();});
+//
+//   } else {
+//
+//     $("#splash").removeClass('show');
+//
+//  	};
+// });
+
+</script>
+
+</head>
+<body>
+<div id="splash"><img src="http://farm1.static.flickr.com/215/482472428_5f2f592b64.jpg" /></div>
+<div id="content">Page content here</div>
+</body>
+</html>
