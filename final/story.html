@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="parallax.js-1.5.0/parallax.min.js"></script>
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand"> -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<title>tò he story</title>
+</head>
+
+<body>
+  <div>
+  <header id="navbar">
+        <nav class="navbar-container container">
+          <a href="main.html" class="home-link">
+            <div class="navbar-logo"><img src="tohemainlogo.png" width=auto height=60px></div>
+          </a>
+          <button type="button" class="navbar-toggle" aria-label="Open navigation menu">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <div class="navbar-menu detached">
+            <ul class="navbar-links">
+              <li class="navbar-item"><a class="navbar-link" href="watch.html">watch</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="story.html">story</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="process.html">process</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="character.html">character</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="background.html">background</a></li>
+            </ul>
+          </div>
+        </nav>
+  </header>
+
+  <div id="general">
+    <!-- <img src="process/tohereal.jpg"> -->
+    <h1> STORY </h1>
+    <div class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="process/tohereal2.jpg"></div>
+    <div class="paracontent">
+      <p> In the past, when Vietnam was too poor, the Vietnamese made 'tò he' from glutinous rice so that children could play and eat it afterward. Children would gather in their village to hear tales illustrated by tò he with different shapes such as heroes, animals, flowers, etc., and they would imagine a colorful universe of heroes and fairies. Since the development of technology, tò he was forgotten and was barely known by the younger Vietnamese generations.
+        <br> <br> “Tò He” is a short hand-drawn animation that tells a story about a brother and a sister during wartime in Northern Vietnam (1954-75). In the story, every day, the brother creates a new tò he, a traditional Vietnamese toy which is made from glutinous rice, for his little sister based on a tutorial book that his father leaves behind before going to the war. With an imaginative mind, the little sister enjoys playing with the toy as if they are real. However, after finishing all the tutorials in the book, and the father has not come back from the war, the brother struggles to create a new toy for his sister. After seeing his sister holding the photo of their family, the brother decides to create a toy in the form of the father. The moment he is about to give this new toy to his sister, their father comes home and they reunite happily. The story revisits an old tradition of making toys in Vietnam, as well as reflects the poverty and the family-hood in Vietnam during wartime.
+        <br> <br> The film is deeply influenced by Studio Ghibli and Pixar's movies as well as artists such as Kazuo Oga, Alex Sprouse Art, and 'tò he' artists. To learn more about the influence of those artists on the film, please visit here.
+      </p>
+    </div>
+  </div>
+
+  </div>
+  
+  <script>
+
+  document.addEventListener("DOMContentLoaded", function() {
+  const navbar = document.getElementById("navbar");
+  const navbarToggle = navbar.querySelector(".navbar-toggle");
+
+  function openMobileNavbar() {
+    navbar.classList.add("opened");
+    navbarToggle.setAttribute("aria-label", "Close navigation menu.");
+  }
+
+  function closeMobileNavbar() {
+    navbar.classList.remove("opened");
+    navbarToggle.setAttribute("aria-label", "Open navigation menu.");
+  }
+
+  navbarToggle.addEventListener("click", () => {
+    if (navbar.classList.contains("opened")) {
+      closeMobileNavbar();
+    } else {
+      openMobileNavbar();
+    }
+  });
+
+  const navbarMenu = navbar.querySelector(".navbar-menu");
+  const navbarLinksContainer = navbar.querySelector(".navbar-links");
+
+  navbarLinksContainer.addEventListener("click", (clickEvent) => {
+    clickEvent.stopPropagation();
+  });
+
+  navbarMenu.addEventListener("click", closeMobileNavbar);
+  });
+  </script>
+
+  </body>
+  </html>

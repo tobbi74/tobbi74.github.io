@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" src="jquery-3.6.0.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<title>tò he watch</title>
+</head>
+
+<body>
+  <header id="navbar">
+        <nav class="navbar-container container">
+          <a href="main.html" class="home-link">
+            <div class="navbar-logo"><img src="tohemainlogo.png" width=auto height=60px></div>
+          </a>
+          <button type="button" class="navbar-toggle" aria-label="Open navigation menu">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <div class="navbar-menu detached">
+            <ul class="navbar-links">
+              <li class="navbar-item"><a class="navbar-link" href="watch.html">watch</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="story.html">story</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="process.html">process</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="character.html">character</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="background.html">background</a></li>
+            </ul>
+          </div>
+        </nav>
+  </header>
+
+  <div id="videopage">
+      <div id="video">
+        <iframe id="myplayer" class="video" src="https://www.youtube.com/embed/9YffrCViTVk?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <br>
+      <div class="switch"><img id="switch" src="testbulb.png" width=auto height=60px></div>
+      <div id='persoff'></div>
+  </div>
+
+  <script>
+
+  // responsive nav bar
+  document.addEventListener("DOMContentLoaded", function() {
+  const navbar = document.getElementById("navbar");
+  const navbarToggle = navbar.querySelector(".navbar-toggle");
+
+  function openMobileNavbar() {
+    navbar.classList.add("opened");
+    navbarToggle.setAttribute("aria-label", "Close navigation menu.");
+  }
+
+  function closeMobileNavbar() {
+    navbar.classList.remove("opened");
+    navbarToggle.setAttribute("aria-label", "Open navigation menu.");
+  }
+
+  navbarToggle.addEventListener("click", () => {
+    if (navbar.classList.contains("opened")) {
+      closeMobileNavbar();
+    } else {
+      openMobileNavbar();
+    }
+  });
+
+  const navbarMenu = navbar.querySelector(".navbar-menu");
+  const navbarLinksContainer = navbar.querySelector(".navbar-links");
+
+  navbarLinksContainer.addEventListener("click", (clickEvent) => {
+    clickEvent.stopPropagation();
+  });
+
+  navbarMenu.addEventListener("click", closeMobileNavbar);
+  });
+
+  // turn off light when video play
+  jQuery("#persoff").css('height', jQuery(document).height()).hide();
+  jQuery("body").on('click', function (e) {
+  jQuery("#persoff").toggle(false);
+  });
+  jQuery(".switch").on('click', function (e) {
+  e.stopPropagation();
+  jQuery("#persoff").toggle();
+  });
+  </script>
+
+  </body>
+  </html>
