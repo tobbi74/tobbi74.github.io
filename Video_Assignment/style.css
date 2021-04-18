@@ -1,0 +1,136 @@
+* {
+	font-family: 'Comfortaa', cursive;
+}
+
+.title{
+	text-align: center;
+	font-size: 200%;
+}
+body{
+	background-color: #FFCDB2;
+	overflow: scroll;
+}
+video {
+  transform: translate(-50%, 1px);
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  width:70%;
+	display: block;
+	padding-bottom: 70px;
+}
+
+/* button on page 1 */
+.button1style {
+	position: fixed;
+	display: block;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+	 margin-bottom: 30px;
+}
+#button1{
+  background-color: #FFCDB2;
+	border-radius: 50px;
+  border: 1px solid #6D6875;
+  color: #6D6875;
+  font-size: 20px;
+  padding: 20px;
+  width: 300px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+  #button1:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+  }
+
+  #button1:hover {
+    background-color: #FFB4A2;
+		color: #6D6875;
+
+  }
+
+/* contain floated elements */
+#myProgress{
+	display: flex;
+	margin-top: 25px;
+	/* margin-left: 25px;
+	margin-right: 25px; */
+    width: 100%;
+    font-size: 20px;
+    overflow: hidden; /* contain floated elements */
+		text-align: center;
+		justify-content: center;
+}
+#myProgress p{
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+#myBar1 {
+	border-radius: 50px;
+  border: 1px solid #6D6875;
+    float: left;
+    width: 32%;
+    background-color: #FFB4A2;
+    color:#6D6875;
+
+}
+#myBar2 {
+	border-radius: 50px;
+  border: 1px solid #6D6875;
+    float: left;
+    width: 32%;
+    color:#6D6875;
+
+}
+#myBar3{
+	border-radius: 50px;
+  border: 1px solid #6D6875;
+    float: left;
+    width: 32%;
+    color:#6D6875;
+}
+
+.typing{
+	position: absolute;
+	border-radius: 10px;
+	width:70%;
+	left: 15%;
+	height:20%;
+	top: 30%;
+	text-align: center;
+}
+.typing p{
+	padding-top: 1%;
+	padding-left: 20px;
+}
+
+#demo{
+	color: #6D6875;
+	font-size: 40px;
+}
+
+.multibutton {
+	position: relative;
+	display: block;
+   left: 0;
+	 top: 2px;
+	 /* bottom: 50px; */
+	 width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.multi {
+	padding: 30px 50px;
+	width: 50px;
+	height: auto;
+}
