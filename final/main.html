@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- link to jQuery library -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" src="jquery-3.6.0.min.js"></script>
+    <!-- link to font Quicksand -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap" rel="stylesheet">
+    <!-- link to css file -->
+    <link href="style.css" rel="stylesheet">
+    <title>tò he</title>
+  </head>
+
+  <body>
+    <!-- the image appears at first load -->
+    <div id="landing" class="landing">
+      <img class="titleimage" src="tohemaintrans.png">
+    </div>
+
+    <!-- the main page will appear after scroll the landing image -->
+    <div id="mainp">
+      <header id="navbar">
+        <nav class="navbar-container container">
+          <a href="main.html" class="home-link">
+            <div class="navbar-logo"><img src="tohemainlogo.png" width=auto height=60px></div>
+          </a>
+          <button type="button" class="navbar-toggle" aria-label="Open navigation menu">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <div class="navbar-menu detached">
+            <ul class="navbar-links">
+              <li class="navbar-item"><a class="navbar-link" href="watch.html">watch</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="story.html">story</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="process.html">process</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="character.html">character</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="background.html">background</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <div id="videopage">
+        <div id="video">
+          <iframe id="myplayer" class="video" src="https://www.youtube.com/embed/9YffrCViTVk?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br>
+        <!-- when click on the bulb, create a black background to mimic turn off the light effect -->
+        <div class="switch"><img id="switch" src="testbulb.png" width=auto height=60px></div>
+        <div id='persoff'></div>
+      </div>
+
+      <hr size="1" width="100%" color="gray">
+
+      <div class="footer">
+        <p><a href="otherweb.html" target="_blank" rel="noopener noreferrer">other interactive websites</a></p>
+        <p><a href="https://www.tobbivu.com/" target="_blank" rel="noopener noreferrer">tobbi's art</a></p>
+        <br>
+      </div>
+
+    </div>
+    <!-- link to javascript file -->
+    <script src="script.js"></script>
+
+  </body>
+</html>

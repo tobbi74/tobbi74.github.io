@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" src="jquery-3.6.0.min.js"></script>
+    <script src="parallax.js-1.5.0/parallax.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>tò he process</title>
+  </head>
+
+  <body>
+    <header id="navbar">
+      <nav class="navbar-container container">
+        <a href="main.html" class="home-link">
+          <div class="navbar-logo"><img src="tohemainlogo.png" width=auto height=60px></div>
+        </a>
+        <button type="button" class="navbar-toggle" aria-label="Open navigation menu">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-menu detached">
+          <ul class="navbar-links">
+            <li class="navbar-item"><a class="navbar-link" href="watch.html">watch</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="story.html">story</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="process.html">process</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="character.html">character</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="background.html">background</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div id="general">
+      <!-- parallax background for the title -->
+      <h1> PROCESS </h1>
+      <div class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="process/process.jpg"></div>
+
+      <div class="paracontent">
+        <h2> 1. Character design </h2>
+        <p>The character design is influenced by the appearance of my family and friends. They all have similar Vietnamese characteristics of big nose and black hair. For animating the characters, click the image below.</p>
+        <!-- click image to animate the characters -->
+        <img alt="" src="process/process/characterstill.jpg" id="imgClickAndChange">
+        <hr size="1" width="100%" color="gray">
+
+        <h2> 2. Storyboard </h2>
+        <p> The storyboard is illustrated using Storyboard Pro. It lays out every shot in the film.</p>
+        <img src="process/storyboard.jpg">
+        <hr size="1" width="100%" color="gray">
+
+        <h2> 3. 3D model </h2>
+        <p>The background of the house is modeled using SketchUp Pro to portray the exact dimension and perspective of the background. The properties in the house are taken from various sources from SketchUp 3D Warehouse. For viewing the 3D model, click the arrow on the left of the image to choose from orbit, pan, and zoom.</p>
+        <!-- link to 3D model from SketchUp Warehouse -->
+        <iframe src="https://3dwarehouse.sketchup.com/embed/ba706475-aca9-44be-9d29-a0a4db22485b" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="580" height="326" allowfullscreen></iframe>
+        <hr size="1" width="100%" color="gray">
+
+        <h2> 4. Background </h2>
+        <p>The backgrounds are traced from the 3D models and painted with gouache.</p>
+        <img src="process/background/2.png">
+        <hr size="1" width="100%" color="gray">
+
+        <h2> 5. Video reference </h2>
+        <p>Every action in the film is animated based on video references.</p>
+        <img src="process/process/vidref.gif">
+        <hr size="1" width="100%" color="gray">
+
+        <h2> 6. Animation </h2>
+        <p>Using the referenced video, the actions in the film are sketched using Toon Boom Harmony to match the appearance of the character.</p>
+        <img src="process/process/animation.gif">
+        <hr size="1" width="100%" color="gray">
+
+        <h2> 7. Clean-up </h2>
+        <p> The animation draft is then cleaned up using a clean, thin, black line.</p>
+        <img src="process/process/cleanup.gif">
+        <hr size="1" width="100%" color="gray">
+
+        <h2> 8. Color </h2>
+        <p> After cleaning up the animation, the characters are colored and the backgrounds are lit and shaded.</p>
+        <img src="process/process/color.gif">
+      </div>
+    </div>
+
+    <hr size="1" width="100%" color="gray">
+    <div class="footer">
+      <p><a href="otherweb.html" target="_blank" rel="noopener noreferrer">other interactive websites</a></p>
+      <p><a href="https://www.tobbivu.com/" target="_blank" rel="noopener noreferrer">tobbi's art</a></p><br>
+    </div>
+
+    <script>
+      // change image on click
+      var images = ["process/process/characterstill.jpg", "process/process/charactergif.gif" ]
+
+      var imgState = 0;
+
+      var imgTag = document.getElementById("imgClickAndChange");
+
+      imgTag.addEventListener("click", function (event) {
+        imgState = (++imgState % 2);
+	      event.target.src = images[imgState];
+      });
+    </script>
+
+    <!-- link to javascript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
