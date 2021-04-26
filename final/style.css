@@ -1,0 +1,461 @@
+*{
+  /* apply to the whole website */
+  font-family: "Quicksand";
+  text-decoration: none;
+}
+
+body {
+  /* Show vertical scrollbar */
+  overflow-y: scroll;
+}
+
+/* main page not display at first load */
+#mainp {
+   display: none;
+   margin:0;
+}
+
+/* landing page at first load */
+.landing{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  background: #000000;
+  margin: 5 5px;
+}
+
+.titleimage{
+  display: flex;
+  max-width:100%;
+  max-height:100%;
+  vertical-align: middle;
+}
+
+/* fixed values for nav bar */
+:root {
+  --navbar-bg-color: #000000;
+  --navbar-text-color: #ffffff;
+  --navbar-text-color-focus: #c28502;
+}
+
+.container {
+  max-width: 1000px;
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#navbar {
+  --navbar-height: 90px;
+  position: absolute;
+  height: var(--navbar-height);
+  background-color: var(--navbar-bg-color);
+  left: 8px;
+  right: 8px;
+  /* z index to show the nav bar when turn the light off */
+  z-index: 3;
+  font-weight: 300;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+
+.home-link,
+.navbar-link {
+  color: var(--navbar-text-color);
+  font-size: 25px;
+  transition: color 0.2s ease-in-out;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out,
+              color 0.2s ease-in-out;
+}
+
+.home-link:focus,
+.home-link:hover {
+  /* change color of the text when hover on the nav bar */
+  color: var(--navbar-text-color-focus);
+}
+
+.navbar-link {
+  justify-content: center;
+  width: 100%;
+  padding: 0.9em 0.8em;
+  border-radius: 5px;
+}
+
+.navbar-link:focus,
+.navbar-link:hover {
+  color: var(--navbar-text-color-focus);
+  background-color: var(--navbar-bg-contrast);
+}
+
+.navbar-toggle {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.icon-bar {
+  display: block;
+  width: 25px;
+  height: 4px;
+  margin: 2px;
+  transition: background-color 0.2s ease-in-out,
+              transform 0.2s ease-in-out,
+              opacity 0.2s ease-in-out;
+              background-color: var(--navbar-text-color);
+}
+
+.navbar-toggle:focus .icon-bar,
+.navbar-toggle:hover .icon-bar {
+  background-color: var(--navbar-text-color-focus);
+}
+
+#navbar.opened .navbar-toggle .icon-bar:first-child,
+#navbar.opened .navbar-toggle .icon-bar:last-child {
+  position: absolute;
+  margin: 0;
+  width: 30px;
+}
+
+#navbar.opened .navbar-toggle .icon-bar:first-child {
+  transform: rotate(45deg);
+}
+
+#navbar.opened .navbar-toggle .icon-bar:nth-child(2) {
+  opacity: 0;
+}
+
+#navbar.opened .navbar-toggle .icon-bar:last-child {
+  transform: rotate(-45deg);
+}
+
+.navbar-menu {
+  position: fixed;
+  top: var(--navbar-height);
+  bottom: 0;
+  transition: opacity 0.2s ease-in-out,
+              visibility 0.2s ease-in-out,
+              left 0.2s ease-in-out,
+              right 0.2s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.navbar-menu.sidebar,
+.navbar-menu.sidebar.left {
+  left: -1000px;
+  right: 0;
+}
+
+.navbar-menu.sidebar.right {
+  right: -1000px;
+  left: 0;
+}
+
+.navbar-menu.detached,
+.navbar-menu.attached {
+  left: 0;
+  right: 0;
+}
+
+#navbar.opened .navbar-menu {
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  visibility: visible;
+}
+
+#navbar.opened .navbar-menu.sidebar.left {
+  left: 0;
+}
+
+#navbar.opened .navbar-menu.sidebar.right {
+  right: 0;
+}
+
+.navbar-links {
+  list-style-type: none;
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+  background-color: var(--navbar-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#navbar.opened .navbar-links {
+  padding: 1em;
+  max-height: none;
+}
+
+.sidebar .navbar-links {
+  top: 0;
+  bottom: 0;
+}
+
+.left.sidebar .navbar-links {
+  left: 0;
+  right: unset;
+  box-shadow: 5px 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+.right.sidebar .navbar-links {
+  right: 0;
+  left: unset;
+  box-shadow: -5px 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+.detached .navbar-links {
+  left: 0;
+  right: 0;
+  margin: 1.4rem;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.attached .navbar-links {
+  left: 0;
+  right: 0;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-item {
+  margin: 0.4em;
+  width: 100%;
+}
+
+/* responsive nav bar */
+@media screen and (min-width: 700px) {
+  .navbar-toggle {
+    display: none;
+  }
+
+  #navbar .navbar-menu,
+  #navbar.opened .navbar-menu {
+    visibility: visible;
+    opacity: 1;
+    position: static;
+    display: block;
+    height: 100%;
+  }
+
+  #navbar .navbar-links,
+  #navbar.opened .navbar-links {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    position: static;
+    flex-direction: row;
+    list-style-type: none;
+    max-height: max-content;
+    width: 100%;
+    height: 100%;
+  }
+
+  #navbar .navbar-link:last-child {
+    margin-right: 0;
+  }
+}
+
+/* video in page main and watch */
+#videopage {
+  padding-top:150px;
+  padding-bottom:10px;
+  max-height: 1080px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#video{
+  display:block;
+  width: 70vw;
+  margin: auto;
+}
+
+#video iframe{
+  position:relative;
+  width: 70vw;
+  height: calc((9/16)*70vw);
+  z-index:2;
+}
+
+/* the button to turn off the light on page main and watch */
+.switch{
+  display: block;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* black background when turn off the light */
+#persoff {
+  background:#000;
+  opacity:1;
+  filter:alpha(opacity=100);
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  z-index:0;
+}
+
+#general {
+  padding-top:90px;
+  display: block;
+  margin: 0 auto;
+}
+
+.parallax-window {
+  min-height: 600px;
+  background: transparent;
+}
+
+.paracontent {
+  max-width: 900px;
+  margin: 0 auto;
+  background:#ffffff;
+  padding-top: 70px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  z-index: 2;
+  line-height: 2;
+  font-size: 20px;
+}
+
+.paracontent img {
+  width: 100%;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.parallax {
+  position:relative;
+  min-height:400px;
+  background:transparent;
+}
+
+h1 {
+  display:block;
+  top: 250px;
+  position: absolute;
+  margin: 0;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 70px;
+  font-weight: 600;
+  z-index: 2;
+  color:#ffffff;
+}
+
+.bgrow {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 40px;
+  max-width: 1500px;
+  margin: 0 auto;
+  background:#ffffff;
+  padding-bottom: 100px;
+}
+
+/* Create two equal columns that sits next to each other */
+.bgcolumn {
+  flex: 40%;
+  max-width: 50%;
+  padding: 0 20px;
+}
+
+.bgcolumn img {
+  margin-top: 40px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .bgcolumn {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.paracontent iframe {
+  width: 100%;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.webcontent {
+  margin-top: 20vh;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 150px;
+}
+
+.webcontent a {
+  cursor: pointer;
+  color: inherit;
+}
+
+#lightbox {
+position:fixed;
+z-index:1000;
+top:0;
+width: 100%;
+height: 100%;
+background-color: rgba(0,0,0,.8);
+display: none;
+}
+
+#lightbox.active {
+display:flex;
+justify-content: center;
+align-items: center;
+}
+
+#lightbox img {
+max-width:90%;
+max-height:90%;
+}
+
+.footer {
+  display: block;
+   background: white;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: black;
+   text-align: center;
+}
+
+.footer a{
+  cursor: pointer;
+  color: inherit;
+}
