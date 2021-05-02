@@ -4,26 +4,45 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="parallax.js-1.5.0/parallax.min.js"></script>
+  <!-- link to font -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap" rel="stylesheet">
+  <!-- link to css file -->
   <link href="style.css" rel="stylesheet">
   <title>other interactive web</title>
 </head>
 
 <body>
     <div class="webcontent">
-      <p><a href="https://tobbi74.github.io/" target="_blank" rel="noopener noreferrer">30-minute Film Festival (30MFF) Web Site</a></p>
+      <!-- when click on the title of each project, the play icon and document icon will show -->
+      <!-- first project -->
+      <p onclick="myFunction()">30-minute Film Festival (30MFF) Web Site</p>
+      <div id="showweb1">
+        <span class="playicon"><a href="https://tobbi74.github.io/" target="_blank" rel="noopener noreferrer"><img src="play.png"></a></span>
+        <span class="docuicon"><a href="https://github.com/tobbi74/tobbi74.github.io" target="_blank" rel="noopener noreferrer"><img src="document.png"></a></span>
+      </div>
       <hr size="1" width="50%" color="gray">
-
-      <p><a href="https://liyanibrahim.github.io/animation/comics2.html" target="_blank" rel="noopener noreferrer">Comix Strip </a></p>
+      <!-- second project -->
+      <p onclick="myFunction2()">Comix Strip</p>
+      <div id="showweb2">
+        <span class="playicon"><a href="https://liyanibrahim.github.io/animation/comics2.html" target="_blank" rel="noopener noreferrer"><img src="play.png"></a></span>
+        <span class="docuicon"><a href="https://github.com/LiyanIbrahim/LiyanIbrahim.github.io/blob/main/animation/README.md" target="_blank" rel="noopener noreferrer"><img src="document.png"></a></span>
+      </div>
       <hr size="1" width="50%" color="gray">
-
-      <p><a href="https://lucychoi1215.github.io/soundproject/soundproject.html" target="_blank" rel="noopener noreferrer">Sounds Like </a></p>
+      <!-- third project -->
+      <p onclick="myFunction3()">Sounds Like</p>
+      <div id="showweb3">
+        <span class="playicon"><a href="https://lucychoi1215.github.io/soundproject/soundproject.html" target="_blank" rel="noopener noreferrer"><img src="play.png"></a></span>
+        <span class="docuicon"><a href="https://lucychoi1215.github.io/soundproject/" target="_blank" rel="noopener noreferrer"><img src="document.png"></a></span>
+      </div>
       <hr size="1" width="50%" color="gray">
-
-      <p><a href="https://liyanibrahim.github.io/Video_Assignment/page1.html" target="_blank" rel="noopener noreferrer">Vid-e-oh!!!</a></p>
-
+      <!-- fourth project -->
+      <p onclick="myFunction4()">Vid-e-oh!!!</p>
+      <div id="showweb4">
+        <span class="playicon"><a href="https://liyanibrahim.github.io/Video_Assignment/page1.html" target="_blank" rel="noopener noreferrer"><img src="play.png"></a></span>
+        <span class="docuicon"><a href="https://github.com/LiyanIbrahim/LiyanIbrahim.github.io/blob/main/Video_Assignment/README.md" target="_blank" rel="noopener noreferrer"><img src="document.png"></a></span>
+      </div>
+    </div>
     </div>
 
     <hr size="1" width="100%" color="gray">
@@ -32,6 +51,47 @@
     <p><a href="main.html" target="_blank" rel="noopener noreferrer">tò he</a></p>
     <p><a href="https://www.tobbivu.com/" target="_blank" rel="noopener noreferrer">tobbi's art</a></p>
     </div>
+    
+    <script>
+      // when click on the title, the play icon and the document icon appear
+      function myFunction() {
+        var webshow = document.getElementById("showweb1");
+        if (webshow.style.display === "none") {
+          webshow.style.display = "block";
+        } else {
+          webshow.style.display = "none";
+        }
+      }
+      function myFunction2() {
+        var webshow2 = document.getElementById("showweb2");
+        if (webshow2.style.display === "none") {
+          webshow2.style.display = "block";
+        } else {
+          webshow2.style.display = "none";
+        }
+      }
+      function myFunction3() {
+        var webshow3 = document.getElementById("showweb3");
+        if (webshow3.style.display === "none") {
+          webshow3.style.display = "block";
+        } else {
+          webshow3.style.display = "none";
+        }
+      }
+      function myFunction4() {
+        var webshow4 = document.getElementById("showweb4");
+        if (webshow4.style.display === "none") {
+          webshow4.style.display = "block";
+        } else {
+          webshow4.style.display = "none";
+        }
+      }
+      // hide the play icon and the document icon when page load
+      document.getElementById("showweb1").style.display="none";
+      document.getElementById("showweb2").style.display="none";
+      document.getElementById("showweb3").style.display="none";
+      document.getElementById("showweb4").style.display="none";
+    </script>
 
   </body>
-  </html>
+</html>
