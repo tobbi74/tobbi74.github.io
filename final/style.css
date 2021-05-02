@@ -449,6 +449,7 @@ max-height:90%;
 /* on hover, zoom in the play icon or the document icon */
 .playicon img:hover{
   transform: scale(1.2);
+  transition: scale 1s;
 }
 .docuicon img:hover{
   transform: scale(1.2);
