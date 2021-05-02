@@ -34,6 +34,7 @@ body {
   vertical-align: middle;
 }
 
+/* css for nav bar */
 /* fixed values for nav bar */
 :root {
   --navbar-bg-color: #000000;
@@ -330,11 +331,11 @@ body {
   margin: 0 auto;
 }
 
+/* css for parallax image and title on each page */
 .parallax-window {
   min-height: 600px;
   background: transparent;
 }
-
 .paracontent {
   max-width: 900px;
   margin: 0 auto;
@@ -347,19 +348,18 @@ body {
   line-height: 2;
   font-size: 20px;
 }
-
 .paracontent img {
   width: 100%;
   margin: 0 auto;
   z-index: 2;
 }
-
 .parallax {
   position:relative;
   min-height:400px;
   background:transparent;
 }
 
+/* css for content on each page */
 h1 {
   display:block;
   top: 250px;
@@ -445,6 +445,16 @@ max-width:90%;
 max-height:90%;
 }
 
+/* css for other interactive website */
+/* on hover, zoom in the play icon or the document icon */
+.playicon img:hover{
+  transform: scale(1.2);
+}
+.docuicon img:hover{
+  transform: scale(1.2);
+}
+
+/* css for footer in all pages */
 .footer {
   display: block;
    background: white;
@@ -454,7 +464,6 @@ max-height:90%;
    color: black;
    text-align: center;
 }
-
 .footer a{
   cursor: pointer;
   color: inherit;
